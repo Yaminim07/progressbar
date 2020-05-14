@@ -16,19 +16,13 @@ export default function ProgressBar(props){
     let containerStyle = {
         height: barHeight
     }, 
-    trackStyle = {
-        width: '100%',
-        height: '100%',
-        backgroundColor: 'lightgray'
-    },
     barStyle = {
         width: progress,
-        height: '100%'
     };
 
     return (
         <div className="bar-container" style={containerStyle}>
-            <div className="progress-track" style={trackStyle}></div>
+            <div className="progress-track"></div>
             <div className="progress-bar" style={barStyle}></div>
         </div>
     )

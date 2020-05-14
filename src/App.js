@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ProgressBar from './progressbar';
 import './App.css';
 
@@ -18,7 +18,14 @@ function App() {
     setscrollPercent(scrollPercent);
   }
 
-  window.addEventListener('scroll', scrollHandler);
+  useEffect(() => {
+    window.addEventListener('scroll', scrollHandler);
+
+    return function cleanUp(){
+      window.removeEventListener('scroll')
+    }
+
+  }, [])
 
   return (
     <div className="App">

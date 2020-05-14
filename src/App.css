@@ -2,10 +2,6 @@
   --bar-color: blue;
 }
 
-.progress-bar{
-  background-color: var(--bar-color)
-}
-
 .bar-container{
   position: relative;
 }
@@ -13,6 +9,17 @@
 .progress-track, .progress-bar{
   position: absolute;
   top: 0;
+}
+
+.progress-bar{
+  background-color: var(--bar-color);
+  height: 100%;
+}
+
+.progress-track{
+  width: 100%;
+  height: 100%;
+  background-color: lightgray;
 }
 
 header{
